@@ -5,7 +5,11 @@ import SwiftData
 import SwiftUI
 
 struct ScratchView: View {
-    @Bindable var model = ScratchDataService.shared.model
+    @Bindable var model: ScratchModel
+
+    init(from model: ScratchModel) {
+        self.model = model
+    }
 
     var body: some View {
         TextEditor(text: $model.text)
