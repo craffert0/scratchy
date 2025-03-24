@@ -23,16 +23,31 @@ class ScratchDataService {
             try! ModelContainer(for: schema,
                                 configurations: [modelConfiguration])
         modelContext = modelContainer.mainContext
+        modelContext.autosaveEnabled = true
     }
 
     var model: ScratchModel {
-        // Force there to be a single Model
-        let scratches = try! modelContext.fetch(FetchDescriptor<ScratchModel>())
-        if let first = scratches.first {
+        // There must be a single ScratchModel, but we could have multiple out
+        // there. So merge them. Poorly.
+        let scratches =
+            try! modelContext.fetch(FetchDescriptor<ScratchModel>())
+        switch scratches.count {
+        case 0:
+            let new = ScratchModel()
+            modelContext.insert(new)
+            return new
+        case 1:
+            return scratches.first!
+        default:
+            let first = scratches.first!
+            let extras = scratches.suffix(from: 1)
+            var text = first.text
+            for m in extras {
+                text = "\n" + m.text
+                modelContext.delete(m)
+            }
+            first.text = text
             return first
         }
-        let new = ScratchModel()
-        modelContext.insert(new)
-        return new
     }
 }
