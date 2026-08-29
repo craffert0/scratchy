@@ -6,23 +6,27 @@ import SwiftUI
 
 @main
 struct ScratchyApp: App {
-    var sharedModelContainer: ModelContainer = {
+    let modelContainer: ModelContainer
+    let context: Context
+
+    init() {
         let schema = Schema([
             ScratchModel.self,
         ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        let modelConfiguration =
+            ModelConfiguration(schema: schema,
+                               isStoredInMemoryOnly: false)
 
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+        modelContainer =
+            try! ModelContainer(for: schema,
+                                configurations: [modelConfiguration])
+        context = .init(modelContext: modelContainer.mainContext)
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(context: context)
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(modelContainer)
     }
 }

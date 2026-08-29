@@ -4,12 +4,9 @@
 import SwiftData
 import SwiftUI
 
-private let debounceInterval = 2.0
-
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
+    var context: Context
     @Query private var models: [ScratchModel]
-    private static var timer: Timer?
 
     var model: ScratchModel {
         // There must be a single ScratchModel, but we could have multiple
@@ -17,8 +14,8 @@ struct ContentView: View {
         switch models.count {
         case 0:
             let new = ScratchModel()
-            modelContext.insert(new)
-            try? modelContext.save()
+            context.insert(new)
+            context.forceSave()
             return new
         case 1:
             return models.first!
@@ -28,10 +25,10 @@ struct ContentView: View {
             var text = first.text
             for m in extras {
                 text = "\n" + m.text
-                modelContext.delete(m)
+                context.delete(m)
             }
             first.text = text
-            try? modelContext.save()
+            context.forceSave()
             return first
         }
     }
@@ -44,15 +41,7 @@ struct ContentView: View {
             }
         }
         .onChange(of: model.text) {
-            if Self.timer == nil {
-                Self.timer = .scheduledTimer(
-                    withTimeInterval: debounceInterval,
-                    repeats: false
-                ) { _ in
-                    try? modelContext.save()
-                    Self.timer = nil
-                }
-            }
+            context.save()
         }
     }
 
@@ -65,9 +54,4 @@ struct ContentView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity,
                alignment: .topTrailing)
     }
-}
-
-#Preview {
-    ContentView()
-        .modelContainer(for: ScratchModel.self, inMemory: true)
 }
