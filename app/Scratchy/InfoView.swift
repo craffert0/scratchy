@@ -2,6 +2,7 @@
 // Copyright (C) 2026 Colin Rafferty <colin@rafferty.net>
 
 import SwiftUI
+import SwiftUIUtil
 
 struct InfoView: View {
     private let githubMarkdown =
@@ -52,7 +53,7 @@ struct InfoView: View {
             .multilineTextAlignment(.center)
             .frame(maxWidth: .infinity, alignment: .center)
             .sheet(isPresented: $showLicense) {
-                LicenseView()
+                LicenseView(model: .gplV2)
             }
 
             Text(

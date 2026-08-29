@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3BE66E2830437760001E7B87 /* SwiftUIUtil in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE66E2730437760001E7B87 /* SwiftUIUtil */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3B4A29692D91A417003BFF14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE66E2830437760001E7B87 /* SwiftUIUtil in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +130,7 @@
 			);
 			name = Scratchy;
 			packageProductDependencies = (
+				3BE66E2730437760001E7B87 /* SwiftUIUtil */,
 			);
 			productName = Scratchy;
 			productReference = 3B4A29542D91A416003BFF14 /* Scratchy.app */;
@@ -208,6 +214,9 @@
 			);
 			mainGroup = 3B4A294B2D91A416003BFF14;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3BE66E2630437760001E7B87 /* XCRemoteSwiftPackageReference "swiftutil" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3B4A29552D91A416003BFF14 /* Products */;
 			projectDirPath = "";
@@ -610,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3BE66E2630437760001E7B87 /* XCRemoteSwiftPackageReference "swiftutil" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitlab.com/craffert0/swiftutil";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3BE66E2730437760001E7B87 /* SwiftUIUtil */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE66E2630437760001E7B87 /* XCRemoteSwiftPackageReference "swiftutil" */;
+			productName = SwiftUIUtil;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B4A294C2D91A416003BFF14 /* Project object */;
 }
