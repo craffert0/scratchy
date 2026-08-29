@@ -37,18 +37,33 @@ struct ContentView: View {
     }
 
     var body: some View {
-        ScratchView(from: model)
-            .onChange(of: model.text) {
-                if Self.timer == nil {
-                    Self.timer = .scheduledTimer(
-                        withTimeInterval: debounceInterval,
-                        repeats: false
-                    ) { _ in
-                        try? modelContext.save()
-                        Self.timer = nil
-                    }
+        NavigationStack {
+            ZStack {
+                ScratchView(from: model)
+                infoView
+            }
+        }
+        .onChange(of: model.text) {
+            if Self.timer == nil {
+                Self.timer = .scheduledTimer(
+                    withTimeInterval: debounceInterval,
+                    repeats: false
+                ) { _ in
+                    try? modelContext.save()
+                    Self.timer = nil
                 }
             }
+        }
+    }
+
+    private var infoView: some View {
+        NavigationLink {
+            InfoView()
+        } label: {
+            Label("", systemImage: "info.circle")
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity,
+               alignment: .topTrailing)
     }
 }
 
