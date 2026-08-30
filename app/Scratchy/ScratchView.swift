@@ -12,6 +12,6 @@ struct ScratchView: View {
     }
 
     var body: some View {
-        TextEditor(text: $model.text)
+        TextEditor(text: $model.text).padding()
     }
 }
