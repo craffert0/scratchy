@@ -628,7 +628,7 @@
 			repositoryURL = "https://gitlab.com/craffert0/swiftutil";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.1;
+				minimumVersion = 1.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
