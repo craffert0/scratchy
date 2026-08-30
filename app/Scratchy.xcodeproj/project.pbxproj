@@ -28,18 +28,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B4A29542D91A416003BFF14 /* Scratchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scratchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4A29542D91A416003BFF14 /* Scritchy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scritchy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4A29682D91A417003BFF14 /* ScratchyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScratchyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4A29722D91A417003BFF14 /* ScratchyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScratchyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3B4A297A2D91A417003BFF14 /* Exceptions for "Scratchy" folder in "Scratchy" target */ = {
+		3B4A297A2D91A417003BFF14 /* Exceptions for "Scratchy" folder in "Scritchy" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 3B4A29532D91A416003BFF14 /* Scratchy */;
+			target = 3B4A29532D91A416003BFF14 /* Scritchy */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -47,7 +47,7 @@
 		3B4A29562D91A416003BFF14 /* Scratchy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				3B4A297A2D91A417003BFF14 /* Exceptions for "Scratchy" folder in "Scratchy" target */,
+				3B4A297A2D91A417003BFF14 /* Exceptions for "Scratchy" folder in "Scritchy" target */,
 			);
 			path = Scratchy;
 			sourceTree = "<group>";
@@ -103,7 +103,7 @@
 		3B4A29552D91A416003BFF14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B4A29542D91A416003BFF14 /* Scratchy.app */,
+				3B4A29542D91A416003BFF14 /* Scritchy.app */,
 				3B4A29682D91A417003BFF14 /* ScratchyTests.xctest */,
 				3B4A29722D91A417003BFF14 /* ScratchyUITests.xctest */,
 			);
@@ -113,9 +113,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B4A29532D91A416003BFF14 /* Scratchy */ = {
+		3B4A29532D91A416003BFF14 /* Scritchy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B4A297B2D91A417003BFF14 /* Build configuration list for PBXNativeTarget "Scratchy" */;
+			buildConfigurationList = 3B4A297B2D91A417003BFF14 /* Build configuration list for PBXNativeTarget "Scritchy" */;
 			buildPhases = (
 				3B4A29502D91A416003BFF14 /* Sources */,
 				3B4A29512D91A416003BFF14 /* Frameworks */,
@@ -128,12 +128,12 @@
 			fileSystemSynchronizedGroups = (
 				3B4A29562D91A416003BFF14 /* Scratchy */,
 			);
-			name = Scratchy;
+			name = Scritchy;
 			packageProductDependencies = (
 				3BE66E2730437760001E7B87 /* SwiftUIUtil */,
 			);
 			productName = Scratchy;
-			productReference = 3B4A29542D91A416003BFF14 /* Scratchy.app */;
+			productReference = 3B4A29542D91A416003BFF14 /* Scritchy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3B4A29672D91A417003BFF14 /* ScratchyTests */ = {
@@ -222,7 +222,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B4A29532D91A416003BFF14 /* Scratchy */,
+				3B4A29532D91A416003BFF14 /* Scritchy */,
 				3B4A29672D91A417003BFF14 /* ScratchyTests */,
 				3B4A29712D91A417003BFF14 /* ScratchyUITests */,
 			);
@@ -280,12 +280,12 @@
 /* Begin PBXTargetDependency section */
 		3B4A296A2D91A417003BFF14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B4A29532D91A416003BFF14 /* Scratchy */;
+			target = 3B4A29532D91A416003BFF14 /* Scritchy */;
 			targetProxy = 3B4A29692D91A417003BFF14 /* PBXContainerItemProxy */;
 		};
 		3B4A29742D91A417003BFF14 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B4A29532D91A416003BFF14 /* Scratchy */;
+			target = 3B4A29532D91A416003BFF14 /* Scritchy */;
 			targetProxy = 3B4A29732D91A417003BFF14 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -591,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B4A297B2D91A417003BFF14 /* Build configuration list for PBXNativeTarget "Scratchy" */ = {
+		3B4A297B2D91A417003BFF14 /* Build configuration list for PBXNativeTarget "Scritchy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B4A297C2D91A417003BFF14 /* Debug */,

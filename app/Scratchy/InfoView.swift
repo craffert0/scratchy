@@ -26,7 +26,7 @@ struct InfoView: View {
             instructionsView
             copyrightView
         }
-        .navigationTitle("Scratchy")
+        .navigationTitle("Scritchy")
         .navigationBarTitleDisplayMode(.large)
     }
 
